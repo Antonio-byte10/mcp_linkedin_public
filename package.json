@@ -1,0 +1,54 @@
+{
+  "name": "mcp_linkedin_public",
+  "version": "0.9.0",
+  "private": true,
+  "description": "MCP server that drives your own LinkedIn account in a dedicated Edge/Chrome profile: job search and analysis, Easy Apply, invites and messages only for items you approve.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antonio-byte10/mcp_linkedin_public.git"
+  },
+  "homepage": "https://github.com/Antonio-byte10/mcp_linkedin_public#readme",
+  "bugs": {
+    "url": "https://github.com/Antonio-byte10/mcp_linkedin_public/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linkedin",
+    "playwright",
+    "claude",
+    "job-search",
+    "easy-apply",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "browser": "tsx src/cli/launch-browser.ts",
+    "edge": "tsx src/cli/launch-browser.ts",
+    "migrate-data": "tsx src/cli/migrate-data.ts",
+    "setup-answers": "tsx src/cli/setup-answers.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
+    "test": "node --import tsx --test \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "exceljs": "^4.4.0",
+    "playwright-core": "^1.64.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

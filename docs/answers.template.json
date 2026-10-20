@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "policy": {
+    "unmatched_required": "stop_and_ask",
+    "unmatched_optional": "leave_and_report",
+    "skills_not_listed": "zero_years_and_no",
+    "prefill_without_bank_entry": "stop_and_ask",
+    "save_new_answers": "on_explicit_approval",
+    "submit": "after_batch_approval",
+    "sensitive_confirmation": "once"
+  },
+  "note_templates": {
+    "_note": "Connection-note templates for connect_prepare/connect_execute (note_template = key). Placeholders: {first_name} {company} {role}, taken from the cached profile (headline forms 'Role at/na/no/em Company', 'Role | Company', 'Role @ Company'). Text in [ ... ] is optional: it is dropped when a placeholder inside it cannot be filled; outside brackets, the whole sentence with an unfillable {company}/{role} is dropped. No first name = the profile is rejected. Max 300 chars after rendering.",
+    "geral": "Olá, {first_name}! Vi seu perfil[ na {company}] e gostaria de me conectar para trocar experiências.",
+    "recrutador": "Olá, {first_name}! Tenho interesse em oportunidades[ na {company}]. Posso me conectar para acompanhar as vagas?"
+  },
+  "target": {
+    "_note": "Only jobs inside this area are offered by apply_prepare. Skills outside the skills list are answered 0 years / No (truthful: the list is exhaustive).",
+    "include_titles": [],
+    "exclude_titles": [],
+    "seniority": [],
+    "modalities": [],
+    "hybrid_area": [
+      "<cidade>"
+    ],
+    "excluded_companies": []
+  },
+  "profile": {
+    "first_name": null,
+    "last_name": null,
+    "email": null,
+    "phone": {
+      "country_option": null,
+      "national": null
+    },
+    "location_city": {
+      "pt": null,
+      "en": null,
+      "typeahead_query": null
+    },
+    "linkedin_url": null,
+    "portfolio_url": null,
+    "github_url": null,
+    "current_employer": null,
+    "current_role": null,
+    "currently_employed": null,
+    "total_years_experience": null,
+    "years_in_data": null,
+    "cpf": null
+  },
+  "mobility": {
+    "accepts_remote": null,
+    "accepts_remote_abroad": null,
+    "accepts_hybrid": null,
+    "accepts_onsite": null,
+    "onsite_cities": [],
+    "willing_to_relocate": null,
+    "relocate_destinations": [],
+    "work_authorized_countries": [],
+    "portuguese_descent": null,
+    "eu_citizenship": null,
+    "citizenships": [],
+    "needs_visa_sponsorship": {
+      "BR": null,
+      "EU": null,
+      "US": null,
+      "other": null
+    }
+  },
+  "skills": [],
+  "education": {
+    "higher_ed_status": null,
+    "degree": {
+      "course": null,
+      "institution": null,
+      "year": null
+    },
+    "levels_completed": [],
+    "certifications": []
+  },
+  "languages": {
+    "english": null,
+    "english_linkedin_scale": null,
+    "spanish": null,
+    "spanish_linkedin_scale": null,
+    "portuguese": null,
+    "spanish_note": null
+  },
+  "compensation": {
+    "desired_clt_monthly_brl": {
+      "min": null,
+      "max": null,
+      "single_value": null,
+      "note": null
+    },
+    "desired_pj_monthly": {
+      "brazil_brl_min": null,
+      "us_usd_monthly": null
+    },
+    "current_salary": {
+      "gross_monthly_brl": null,
+      "text_pt": null,
+      "text_en": null
+    },
+    "current_benefits": {
+      "items": {
+        "vr_brl": null,
+        "vt_brl": null,
+        "wellhub": null
+      },
+      "text_pt": null,
+      "text_en": null
+    },
+    "flexible": null
+  },
+  "availability": {
+    "contract_types": [],
+    "notice_period_days": null
+  },
+  "diversity": {
+    "gender": "prefer_not",
+    "race_ethnicity": "prefer_not",
+    "disability_pcd": "prefer_not",
+    "lgbtqia": "prefer_not"
+  },
+  "consents": {
+    "privacy_lgpd": null,
+    "ai_screening": null,
+    "truthfulness": null
+  },
+  "referrals": {
+    "knows_employee_default": "none",
+    "conditional_na_text": "NA"
+  },
+  "documents": {
+    "resume_by_language": {
+      "pt": null,
+      "en": null,
+      "bilingual": null
+    },
+    "cover_letter": {
+      "policy": null,
+      "file": null,
+      "todo": null
+    },
+    "resume_paths": {
+      "pt": null,
+      "en": null
+    },
+    "follow_company": null
+  },
+  "free_text": {
+    "pitch_short": {
+      "pt": null,
+      "en": null
+    },
+    "heard_from": null,
+    "why_company": null
+  },
+  "learned": [],
+  "_consistency": "Keep one source of truth per question family: every skills[].years must be <= profile.total_years_experience, profile.years_in_data <= total_years_experience, and a skill with knows=false has years 0/null. Skills with no dictionary entry are still matched through their own aliases."
+}

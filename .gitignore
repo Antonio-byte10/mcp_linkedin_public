@@ -1,0 +1,45 @@
+# Dependencies and build output (recreated by npm install / npm run build)
+node_modules/
+dist/
+
+# Local data: NEVER commit.
+# data/ = SQLite cache (third-party profiles, jobs), answers.json (your personal answers), exports, form/page maps
+# .edge-profile/ .chrome-profile/ = the logged-in LinkedIn session
+data/
+.edge-profile/
+.chrome-profile/
+# The data folder is outside the repo by default; these keep a LINKEDIN_DATA_DIR pointed inside it from being committed
+answers.json
+answers.backup-*.json
+edge-profile/
+chrome-profile/
+form-maps/
+page-maps/
+exports/
+applications/
+*.mcp-partial
+*.xlsx
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
+scripts/*.local.*
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+*.tmp
+coverage/
+
+# OS and editors
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Local state of coding-agent tools
+.omc/
+.superpowers/
+.claude/
