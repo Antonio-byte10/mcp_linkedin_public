@@ -64,7 +64,7 @@ Referência detalhada: [docs/TOOLS.md](docs/TOOLS.md). Exemplos de pedidos: [doc
 
 ## Pendências
 
-Resumo (detalhes em [docs/TODO.md](docs/TODO.md)):
+Resumo (detalhes em [docs/TODO.md](docs/TODO.md)). **O passo a passo do que testar e fazer na sua máquina está no [checklist de validação local](docs/TODO.md#checklist-de-validação-local-só-na-sua-máquina)**: depende da sua conta e das suas respostas, então não roda no CI.
 
 **Validar ao vivo**
 - [ ] Chrome (`LINKEDIN_BROWSER=chrome`): login e uma sessão completa ao vivo.
